@@ -29,11 +29,15 @@ public class PauseMenu : MonoBehaviour
 
     public void UnPause()
     {
-
+        Time.timeScale = 1f;
+        isPaused = false;
+        panelPaused.SetActive(false);
     }
 
     public void Pause()
     {
-
+        Time.timeScale = 0f;
+        isPaused = true;
+        panelPaused.SetActive(true);
     }
 }
