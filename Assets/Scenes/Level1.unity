@@ -11960,7 +11960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1206004169
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12079,7 +12079,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset
+  m_text: Respawn
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0667130a0d3500429482cc1a684203b, type: 2}
   m_sharedMaterial: {fileID: 703218678066834742, guid: a0667130a0d3500429482cc1a684203b, type: 2}
@@ -21095,7 +21095,7 @@ GameObject:
   - component: {fileID: 1846486112}
   - component: {fileID: 1846486111}
   m_Layer: 5
-  m_Name: Button_Reset
+  m_Name: Button_Respawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
