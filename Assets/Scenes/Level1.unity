@@ -3881,6 +3881,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d68e56dd52661b3439a6be6499ba7865, type: 3}
   coinParticles: {fileID: 6235647180972991873, guid: c5c2dfdc2384bbe46911648af5320379, type: 3}
   dustParticles: {fileID: 6423656816261263125, guid: 195d7c54c6c21f14b910970237423e73, type: 3}
+  swordHitbox: {fileID: 956161586}
   healthSlider: {fileID: 1582678620}
   fillColor: {fileID: 261970492}
   blueHealth: {r: 0.30223563, g: 0.6091998, b: 0.85660374, a: 1}
