@@ -10056,6 +10056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 956161587}
   - component: {fileID: 956161588}
+  - component: {fileID: 956161589}
   m_Layer: 0
   m_Name: SwordAttack
   m_TagString: Untagged
@@ -10115,6 +10116,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.4, y: 0.35}
   m_Size: {x: 1, y: 0.6}
   m_Direction: 1
+--- !u!114 &956161589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956161586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfad12daafcb8e646bba420adb815467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963261167
 GameObject:
   m_ObjectHideFlags: 0
