@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Killzone : MonoBehaviour
 {
-    [SerializeField] private Transform spawnPosition;
+    [SerializeField] public Transform spawnPosition;
     // When an object connected to the script collides (triggers) with ex. a volume, this code will run
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,5 +14,10 @@ public class Killzone : MonoBehaviour
             other.transform.position = spawnPosition.position;
             other.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
         }
+    }
+
+    public void SetSpawnPosition(Vector3 newSpawn)
+    {
+        spawnPosition.position = newSpawn;
     }
 }
