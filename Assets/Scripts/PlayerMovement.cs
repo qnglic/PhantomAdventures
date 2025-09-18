@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioClip pickupCoinSound, pickupHealthSound;
     [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private GameObject coinParticles, dustParticles;
+    [SerializeField] private GameObject swordHitbox;
 
 
     [SerializeField] private Slider healthSlider;
@@ -76,7 +77,11 @@ public class PlayerMovement : MonoBehaviour
         // sets isgrounded parameter to whatever checkifgrounded method returns
         anim.SetBool("IsGrounded", CheckIfGrounded());
 
-
+        // made attackbutton F, can be changed
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            anim.SetTrigger("IsAttacking");
+        }
 
     }
 
@@ -107,6 +112,16 @@ public class PlayerMovement : MonoBehaviour
         {
             RestoreHealth(other.gameObject);
         }
+    }
+
+    public void SwordHitboxON()
+    {
+        swordHitbox.SetActive(true);
+    }
+
+    public void SwordHitboxOFF()
+    {
+        swordHitbox.SetActive(false);
     }
 
     private void FlipSprite(bool direction)
