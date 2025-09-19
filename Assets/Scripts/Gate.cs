@@ -4,7 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Wall : MonoBehaviour
+public class Gate : MonoBehaviour
 {
     [SerializeField] private GameObject box;
 
