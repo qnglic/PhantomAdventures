@@ -57,11 +57,13 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalValue < 0)
         {
             FlipSprite(true);
+            swordHitbox.GetComponent<CapsuleCollider2D>().offset = new Vector2(-0.4f, 0.35f);
         }
 
         if (horizontalValue > 0)
         {
             FlipSprite(false);
+            swordHitbox.GetComponent<CapsuleCollider2D>().offset = new Vector2(0.4f, 0.35f);
         }
 
         if (Input.GetButtonDown("Jump") && CheckIfGrounded() == true)
