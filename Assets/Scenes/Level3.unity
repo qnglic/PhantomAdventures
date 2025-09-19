@@ -9883,7 +9883,7 @@ GameObject:
   - component: {fileID: 946910888}
   - component: {fileID: 946910887}
   m_Layer: 10
-  m_Name: wall
+  m_Name: gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27037,7 +27037,7 @@ GameObject:
   - component: {fileID: 2136278478}
   - component: {fileID: 2136278477}
   m_Layer: 10
-  m_Name: Wall
+  m_Name: GateUpDown
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
