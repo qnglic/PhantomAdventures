@@ -6,12 +6,10 @@ public class GravityFlip : MonoBehaviour
 {
     [SerializeField] private AudioClip sound;
     private AudioSource audioSource;
-    private GameObject obj;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        obj = GetComponent<GameObject>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -22,16 +20,5 @@ public class GravityFlip : MonoBehaviour
             player.GravityFlip();
             audioSource.PlayOneShot(sound, 2.0f);
         }
-
-        // to avoid bug when player jumps on top of object
-
-        obj.SetActive(false);
-        Invoke("Reactivate", 1f);
     }
-
-    private void Reactivate()
-    {
-        obj.SetActive(true);
-    }
-
 }
