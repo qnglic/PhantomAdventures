@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalValue;
     private float rayDistance = 0.25f;
-    private bool isGrounded;
     private bool canMove;
     private int startingHealth = 5;
     private int currentHealth = 0;
@@ -141,15 +140,26 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CheckIfGrounded()
     {
-        RaycastHit2D leftHit = Physics2D.Raycast(leftFoot.position, Vector2.down, rayDistance, whatIsGround);
-        RaycastHit2D rightHit = Physics2D.Raycast(rightFoot.position, Vector2.down, rayDistance, whatIsGround);
+        // if gravity is flipped the raycast is directed up
+        Vector2 rayDirection;
+        if (rgbd.gravityScale == 2)
+        {
+            rayDirection = Vector2.down;
+        }
+        else
+        {
+            rayDirection = Vector2.up;
+        }
+
+        RaycastHit2D leftHit = Physics2D.Raycast(leftFoot.position, rayDirection, rayDistance, whatIsGround);
+        RaycastHit2D rightHit = Physics2D.Raycast(rightFoot.position, rayDirection, rayDistance, whatIsGround);
 
         //Debug.DrawRay(leftFoot.position, Vector2.down * rayDistance, Color.blue, 0.25f);
         //Debug.DrawRay(rightFoot.position, Vector2.down * rayDistance, Color.red, 0.25f);
 
         if (leftHit.collider != null && leftHit.collider.CompareTag("Ground") || rightHit.collider != null && rightHit.collider.CompareTag("Ground"))
         {
-            return true;
+            return true; 
         }
         else
         {
@@ -222,5 +232,16 @@ public class PlayerMovement : MonoBehaviour
                 currentHealth = startingHealth;
             }
         }
+    }
+
+    public void GravityFlip()
+    {
+        // flips the sprite and moves it up/down to avoid bug
+
+        rgbd.gravityScale *= -1;
+        rgbd.transform.localScale = new Vector3(1, rgbd.transform.localScale.y * -1, 1);
+        rgbd.transform.position = new Vector3(rgbd.transform.position.x, rgbd.transform.position.y - 1 * Mathf.Sign(rgbd.gravityScale), 0);
+        jumpForce *= -1;
+
     }
 }
