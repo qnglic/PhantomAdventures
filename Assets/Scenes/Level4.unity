@@ -835,10 +835,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 854207942}
-  - {fileID: 1686386055}
-  - {fileID: 2067434472}
   - {fileID: 442515402}
   - {fileID: 953366813}
+  - {fileID: 1686386055}
+  - {fileID: 563989790}
+  - {fileID: 527247766}
+  - {fileID: 883797758}
+  - {fileID: 2067434472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &53971071
@@ -5362,7 +5365,7 @@ GameObject:
   - component: {fileID: 382028455}
   - component: {fileID: 382028456}
   m_Layer: 0
-  m_Name: CaveBackCover (2)
+  m_Name: Cavewall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6792,7 +6795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 527247766}
   m_Layer: 0
-  m_Name: Water_Background
+  m_Name: Background_Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6817,7 +6820,7 @@ Transform:
   - {fileID: 187678437}
   - {fileID: 42432189}
   - {fileID: 883675257}
-  m_Father: {fileID: 2067434472}
+  m_Father: {fileID: 51032424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528313145
 GameObject:
@@ -7119,7 +7122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 563989790}
   m_Layer: 0
-  m_Name: Forest_Background
+  m_Name: Background_Forest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7156,7 +7159,7 @@ Transform:
   - {fileID: 365984393}
   - {fileID: 667861299}
   - {fileID: 715665205}
-  m_Father: {fileID: 2067434472}
+  m_Father: {fileID: 51032424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &564694073
 PrefabInstance:
@@ -9585,7 +9588,6 @@ Transform:
   m_Children:
   - {fileID: 1903590220}
   - {fileID: 1489838294}
-  - {fileID: 1412543962}
   - {fileID: 1647974848}
   m_Father: {fileID: 51032424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9765,7 +9767,7 @@ GameObject:
   - component: {fileID: 883675257}
   - component: {fileID: 883675258}
   m_Layer: 0
-  m_Name: WaterWell
+  m_Name: WellWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9851,7 +9853,7 @@ GameObject:
   m_Component:
   - component: {fileID: 883797758}
   m_Layer: 0
-  m_Name: BackCover
+  m_Name: Background_Cover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9874,7 +9876,7 @@ Transform:
   - {fileID: 1021325108}
   - {fileID: 382028455}
   - {fileID: 998941751}
-  m_Father: {fileID: 2067434472}
+  m_Father: {fileID: 51032424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897253040
 GameObject:
@@ -11140,7 +11142,7 @@ GameObject:
   - component: {fileID: 998941751}
   - component: {fileID: 998941752}
   m_Layer: 0
-  m_Name: CaveBackCover (3)
+  m_Name: Cavewall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11401,7 +11403,7 @@ GameObject:
   - component: {fileID: 1016086624}
   - component: {fileID: 1016086623}
   m_Layer: 0
-  m_Name: gold_3
+  m_Name: Gold3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11470,12 +11472,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016086622}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 42.4, y: -12.9, z: 0}
   m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 2067434472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021325107
 GameObject:
@@ -11488,7 +11490,7 @@ GameObject:
   - component: {fileID: 1021325108}
   - component: {fileID: 1021325109}
   m_Layer: 0
-  m_Name: CaveBackCover (1)
+  m_Name: Cavewall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11564,93 +11566,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1025129910
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1025129912}
-  - component: {fileID: 1025129911}
-  m_Layer: 0
-  m_Name: rock_3_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1025129911
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025129910}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -326712191
-  m_SortingLayer: 1
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -4377826695280923381, guid: 9cc49b2b6159dc34597710d5891c0027, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.45, y: 0.18}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1025129912
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025129910}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.5, y: -13.75, z: -2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025419980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13190,7 +13105,7 @@ GameObject:
   - component: {fileID: 1230771674}
   - component: {fileID: 1230771673}
   m_Layer: 0
-  m_Name: WaterLake
+  m_Name: LakeWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14493,7 +14408,7 @@ GameObject:
   - component: {fileID: 1288832852}
   - component: {fileID: 1288832851}
   m_Layer: 0
-  m_Name: TopBackCover
+  m_Name: Topcover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15533,7 +15448,7 @@ GameObject:
   - component: {fileID: 1412543962}
   - component: {fileID: 1412543963}
   m_Layer: 0
-  m_Name: Ground_TopRightCorner
+  m_Name: Groundcorner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15553,7 +15468,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 680361435}
-  m_Father: {fileID: 854207942}
+  m_Father: {fileID: 2067434472}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1412543963
 SpriteRenderer:
@@ -39579,15 +39494,14 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1660601296}
-  - {fileID: 1943167874}
+  - {fileID: 1412543962}
   - {fileID: 1488228543}
   - {fileID: 1344296574}
   - {fileID: 361176015}
   - {fileID: 1057353736}
-  - {fileID: 563989790}
-  - {fileID: 527247766}
-  - {fileID: 883797758}
+  - {fileID: 1016086624}
+  - {fileID: 1660601296}
+  - {fileID: 1943167874}
   m_Father: {fileID: 51032424}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2071144041
@@ -40618,5 +40532,3 @@ SceneRoots:
   - {fileID: 330348403}
   - {fileID: 528313147}
   - {fileID: 467883688}
-  - {fileID: 1025129912}
-  - {fileID: 1016086624}
