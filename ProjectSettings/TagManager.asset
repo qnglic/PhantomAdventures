@@ -21,7 +21,7 @@ TagManager:
   - EnemyBlock
   - Player
   - Platform
-  - 
+  - EnemyHitbox
   - 
   - 
   - 
