@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform leftFoot, rightFoot;
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private LayerMask whatIsGround;
-    [SerializeField] private AudioClip pickupCoinSound, pickupHealthSound;
+    [SerializeField] private AudioClip pickupCoinSound, pickupHealthSound, swordAttackSound;
     [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private GameObject coinParticles, dustParticles;
     [SerializeField] private GameObject swordHitbox;
@@ -83,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             anim.SetTrigger("IsAttacking");
+            audioSource.pitch = 1.5f;
+            audioSource.PlayOneShot(swordAttackSound, 0.05f);
         }
 
     }
