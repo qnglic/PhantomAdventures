@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     private int startingHealth = 5;
     private int currentHealth = 0;
     public int coinsCollected = 0;
+    public bool isFlipped = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -237,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
     public void GravityFlip()
     {
         // flips the sprite and moves it up/down to avoid bug
-
+        isFlipped = !isFlipped;
         rgbd.gravityScale *= -1;
         rgbd.transform.localScale = new Vector3(1, rgbd.transform.localScale.y * -1, 1);
         rgbd.transform.position = new Vector3(rgbd.transform.position.x, rgbd.transform.position.y - 1 * Mathf.Sign(rgbd.gravityScale), 0);
