@@ -5373,9 +5373,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Respawn
-
-'
+  m_text: Paused
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0667130a0d3500429482cc1a684203b, type: 2}
   m_sharedMaterial: {fileID: 703218678066834742, guid: a0667130a0d3500429482cc1a684203b, type: 2}
@@ -5402,7 +5400,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.75
+  m_fontSize: 134.3
   m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 1
