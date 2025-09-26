@@ -8636,6 +8636,7 @@ GameObject:
   - component: {fileID: 579257453}
   - component: {fileID: 579257452}
   - component: {fileID: 579257451}
+  - component: {fileID: 579257455}
   m_Layer: 10
   m_Name: Gate (1)
   m_TagString: Ground
@@ -8787,6 +8788,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.3, y: 2.6}
   m_EdgeRadius: 0
+--- !u!114 &579257455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579257449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff5dff70e874c2d4aa068b68e5854336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &583716607
 GameObject:
   m_ObjectHideFlags: 0
@@ -12271,11 +12284,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.5
+      value: 12.68
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -7.17
+      value: -7.51
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35248,11 +35261,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.73
+      value: 18.06
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.14
+      value: -8.58
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35752,11 +35765,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.34
+      value: 13.91
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.84
+      value: -6.04
       objectReference: {fileID: 0}
     - target: {fileID: 410001265413573779, guid: cc83e896f9a2b4544a2bcba74b37e837, type: 3}
       propertyPath: m_LocalPosition.z
