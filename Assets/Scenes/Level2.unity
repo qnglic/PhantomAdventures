@@ -4497,6 +4497,7 @@ MonoBehaviour:
     m_Bits: 1088
   pickupCoinSound: {fileID: 8300000, guid: dc525f0cbc4d8e648bb5748ee47e49d7, type: 3}
   pickupHealthSound: {fileID: 8300000, guid: 4d1a3e1a187106e4eba9f172bec7e345, type: 3}
+  swordAttackSound: {fileID: 0}
   jumpSounds:
   - {fileID: 8300000, guid: c01139c5aaef27248a55229d7babea11, type: 3}
   - {fileID: 8300000, guid: 32ade9f29b7148f47aa72202d36190c7, type: 3}
@@ -4511,6 +4512,7 @@ MonoBehaviour:
   redHealth: {r: 0.690566, g: 0.19674617, b: 0.19980519, a: 1}
   coinText: {fileID: 908285868}
   coinsCollected: 0
+  isFlipped: 0
 --- !u!95 &378251510
 Animator:
   serializedVersion: 7
@@ -25108,6 +25110,7 @@ GameObject:
   - component: {fileID: 1908159930}
   - component: {fileID: 1908159929}
   - component: {fileID: 1908159928}
+  - component: {fileID: 1908159932}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -25202,6 +25205,28 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1908159932
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1908159927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 43bd68f00502af340a92811d29bdf42b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1910685789
 GameObject:
   m_ObjectHideFlags: 0
@@ -27974,7 +27999,7 @@ Animator:
   m_GameObject: {fileID: 2136278476}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d51782f1f2007a1479c6f8c4900c0bb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 446401ce40441ff48968a26da691c5d3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
