@@ -10763,7 +10763,7 @@ MonoBehaviour:
   finishedText: {fileID: 146386173}
   unfinishedText: {fileID: 2055294827}
   questGoal: 15
-  levelToLoad: 0
+  levelToLoad: 5
 --- !u!1 &715665204
 GameObject:
   m_ObjectHideFlags: 0
