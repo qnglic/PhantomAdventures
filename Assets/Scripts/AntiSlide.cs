@@ -2,17 +2,24 @@ using UnityEngine;
 
 public class AntiSlide : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D playerCollider)
-    {
-        if (!playerCollider.CompareTag("Player")) return;
+    [SerializeField] private GameObject box;
+    private bool isActive = false;
 
-        var rampCollider = GetComponent<Collider2D>();
-        rampCollider.isTrigger = false;
-        gameObject.tag = "Ground";
+    void Update()
+    {
+        if (!isActive && box != null && !box.activeSelf)
+        {
+            var rampCollider = GetComponent<Collider2D>();
+            if (rampCollider) rampCollider.isTrigger = false;
+            gameObject.tag = "Ground";
+            isActive = true;
+        }
     }
 
+    // Prevent sliding on slope: put gravity along slope and apply opposite force.
     void OnCollisionStay2D(Collision2D playerCollision)
     {
+        if (!isActive) return;
         if (!playerCollision.collider.CompareTag("Player")) return;
 
         var playerRigidbody = playerCollision.rigidbody;
