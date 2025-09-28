@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3866005447534035349
 Transform:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ MonoBehaviour:
     m_Bits: 1088
   pickupCoinSound: {fileID: 8300000, guid: dc525f0cbc4d8e648bb5748ee47e49d7, type: 3}
   pickupHealthSound: {fileID: 8300000, guid: 4d1a3e1a187106e4eba9f172bec7e345, type: 3}
+  swordAttackSound: {fileID: 0}
   jumpSounds:
   - {fileID: 8300000, guid: c01139c5aaef27248a55229d7babea11, type: 3}
   - {fileID: 8300000, guid: 32ade9f29b7148f47aa72202d36190c7, type: 3}
@@ -339,6 +340,8 @@ MonoBehaviour:
   redHealth: {r: 0.690566, g: 0.19674617, b: 0.19980519, a: 1}
   coinText: {fileID: 0}
   coinsCollected: 0
+  isFlipped: 0
+  hasKey: 0
 --- !u!95 &8427256252596462174
 Animator:
   serializedVersion: 7

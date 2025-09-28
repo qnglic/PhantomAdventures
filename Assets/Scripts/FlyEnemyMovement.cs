@@ -6,7 +6,7 @@ public class FlyEnemyMovement : MonoBehaviour
     [SerializeField] private float knockbackForce = 200f;
     [SerializeField] private float upwardForce = 100f;
     [SerializeField] private float chaseRange = 10f;
-    [SerializeField] private float stopDistance = 1.5f;
+    [SerializeField] private float stopDistance = 0.1f;
     [SerializeField] private int damageGiven = 1;
     [SerializeField] private Transform leftPatrolPoint;
     [SerializeField] private Transform rightPatrolPoint;
@@ -14,7 +14,7 @@ public class FlyEnemyMovement : MonoBehaviour
 
     public DetectionZone attackZone;
     private AudioSource audioSource;
-    private Vector2 homePosition;
+    //private Vector2 homePosition;
     private bool canMove = true;
     public bool _hasTarget = false;
     private bool isFacingRight = true;
@@ -28,7 +28,7 @@ public class FlyEnemyMovement : MonoBehaviour
         rgbd = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
-        homePosition = transform.position;
+        
     }
 
 
@@ -39,6 +39,7 @@ public class FlyEnemyMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         if (!canMove)
             return;
 
@@ -48,7 +49,7 @@ public class FlyEnemyMovement : MonoBehaviour
         }
         else
         {
-            ReturnOrPatrol();
+            Patrol();
         }
     }
 
@@ -80,7 +81,7 @@ public class FlyEnemyMovement : MonoBehaviour
             }
         }
 
-        if (other.gameObject.CompareTag("EnemyBlock") || other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("EnemyBlock") || other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Ground"))
         {
             //Flip();
         }
@@ -92,32 +93,43 @@ public class FlyEnemyMovement : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1;
         transform.localScale = localScale;
-        print("Flip called at position: " + transform.position + ", isFacingRight: " + isFacingRight);
     }
 
     public void FlyEnemyDeath()
     {
+        if (!canMove) return;
+
         GetComponent<Animator>().SetTrigger("Hit");
-        GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<CapsuleCollider2D>().enabled = false;
-        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-        // death sound
+        rgbd.linearVelocity = Vector2.zero;
+        rgbd.simulated = false; 
+        canMove = false;
+        _hasTarget = false;
+        audioSource.pitch = Random.Range(0.8f, 1.2f);
+        audioSource.PlayOneShot(deathSound, 0.5f);
         canMove = false;
         Destroy(gameObject, 0.6f);
     }
 
     private void ChaseAndAttack()
     {
+        if (attackZone.detectedColliders.Count == 0)
+        {
+            HasTarget = false;           
+            rgbd.linearVelocity = Vector2.zero; 
+            return;
+        }
+
         Vector2 playerPos = attackZone.detectedColliders[0].transform.position;
         float distanceToPlayer = Vector2.Distance(transform.position, playerPos);
 
         Vector2 direction = (playerPos - (Vector2)transform.position).normalized;
-        TryFlipDir(direction.x);
 
         // chase or attack
         if (distanceToPlayer <= chaseRange && distanceToPlayer > stopDistance)
         {
-            rgbd.linearVelocity = new Vector2(direction.x * moveSpeed, 0);
+            rgbd.linearVelocity = direction * moveSpeed;
+            TryFlipDir(direction.x);
         }
         else if (distanceToPlayer <= stopDistance)
         {
@@ -132,6 +144,33 @@ public class FlyEnemyMovement : MonoBehaviour
     }
 
     private void Patrol()
+    {
+        float direction = isFacingRight ? 1f : -1f;
+        rgbd.linearVelocity = new Vector2(direction * moveSpeed, 0);
+        float leftX = leftPatrolPoint.position.x;
+        float rightX = rightPatrolPoint.position.x;
+        float bufferZone = 0.3f;
+
+        if (isFacingRight && transform.position.x >= rightX - bufferZone)
+        {
+            rgbd.linearVelocity = Vector2.zero;
+            Flip();
+        }
+        else if (!isFacingRight && transform.position.x <= leftX + bufferZone)
+        {
+            rgbd.linearVelocity = Vector2.zero;
+            Flip();
+        }
+}
+
+
+    private void SnapToPoint(float x)
+    {
+        transform.position = new Vector2(x, transform.position.y);
+    }
+
+
+    /*private void Patrol()
     {
         Debug.Log($"Patrol — isFacingRight: {isFacingRight}, posX: {transform.position.x:F3}");
         rgbd.linearVelocity = new Vector2(isFacingRight ? moveSpeed : -moveSpeed, 0);
@@ -149,8 +188,8 @@ public class FlyEnemyMovement : MonoBehaviour
     private void ReturnOrPatrol()
     {
         homePosition = transform.position;
-
         float distanceToHome = Vector2.Distance(transform.position, homePosition);
+
 
         if (distanceToHome > 0.05f)
         {
@@ -163,7 +202,7 @@ public class FlyEnemyMovement : MonoBehaviour
             rgbd.linearVelocity = Vector2.zero;
             Patrol();
         }
-    }
+    }*/
 
     // helper method to flip direction only when actually needed
     private void TryFlip(float targetX)
