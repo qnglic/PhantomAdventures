@@ -1394,13 +1394,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'A game by Angelina Palacio Frick
+  m_text: 'A game by Group 30
 
 
     With assets used from:
 
-    Szadi
-    Art
+    Szadi Art
 
     O_LOBSTER
 
@@ -1419,7 +1418,9 @@ MonoBehaviour:
 
     Zander Noriega
 
-'
+    Ordinary Cicada
+
+    Silvdragoon_D'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a0667130a0d3500429482cc1a684203b, type: 2}
   m_sharedMaterial: {fileID: 703218678066834742, guid: a0667130a0d3500429482cc1a684203b, type: 2}
@@ -1446,7 +1447,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32.3
+  m_fontSize: 27.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1757,7 +1758,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1266804914
 RectTransform:
   m_ObjectHideFlags: 0
