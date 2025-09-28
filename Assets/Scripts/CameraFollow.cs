@@ -23,7 +23,7 @@ public class CameraFollow : MonoBehaviour
             temp.y *= -1;
         }
 
-        print(temp.x);
+        //print(temp.x);
         Vector3 newPosition = Vector3.Lerp(transform.position, target.position + temp, smoothing * Time.deltaTime);
         transform.position = newPosition;
     }
