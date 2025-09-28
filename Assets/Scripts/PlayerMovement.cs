@@ -34,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     private int currentHealth = 0;
     public int coinsCollected = 0;
     public bool isFlipped = false;
-    public bool hasKey = false;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -116,12 +115,6 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("Health"))
         {
             RestoreHealth(other.gameObject);
-        }
-
-        if (other.CompareTag("Key"))
-        {
-            Destroy(other.gameObject);
-            hasKey = true;
         }
     }
 
