@@ -11,16 +11,18 @@ public class StrangeDoor : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
+
     }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !hasPlayedAnimation)
         {
+            PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
             if (playerMovement.hasKey == true)
             {
                 hasPlayedAnimation = true;
                 anim.SetTrigger("Move");
+                playerMovement.hasKey = false;
             }
             else
             {

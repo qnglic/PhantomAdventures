@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Coin
   - Health
+  - Key
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - EnemyBlock
   - Player
   - Platform
-  - EnemyHitbox
+  - 
   - 
   - 
   - 
