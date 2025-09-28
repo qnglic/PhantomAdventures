@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7e460f3365bdb70468c916bc92a28e89
+guid: 9d136302a21576e498b6cb88ec62ae50
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -1124,50 +1124,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoulderUpL
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 619b8f28933ba9a20800000000000000
-      internalID: 3069963155598260502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoulderUpR
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 416
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b0c0c0ffdd275d10800000000000000
-      internalID: 2114208989913858231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: CaveG_42
       rect:
         serializedVersion: 2
@@ -1344,13 +1300,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BoulderDownL
+      name: Boulder
       rect:
         serializedVersion: 2
         x: 608
         y: 384
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1361,28 +1317,6 @@ TextureImporter:
       bones: []
       spriteID: 5c969d5c0c4fc154799d7a2b24201b9c
       internalID: -1169353520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BoulderDownR
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 384
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c7fc4ee1de4f184081665d6554aeb7b
-      internalID: -67311663
       vertices: []
       indices: 
       edges: []
@@ -5053,7 +4987,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BoulderDownL: -1169353520
+      Boulder: -1169353520
       BoulderDownR: -67311663
       BoulderUpL: 3069963155598260502
       BoulderUpR: 2114208989913858231
