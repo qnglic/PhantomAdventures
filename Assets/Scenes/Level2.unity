@@ -4495,7 +4495,7 @@ MonoBehaviour:
     m_Bits: 1088
   pickupCoinSound: {fileID: 8300000, guid: dc525f0cbc4d8e648bb5748ee47e49d7, type: 3}
   pickupHealthSound: {fileID: 8300000, guid: 4d1a3e1a187106e4eba9f172bec7e345, type: 3}
-  swordAttackSound: {fileID: 0}
+  swordAttackSound: {fileID: 8300000, guid: e750d95beedac4a42a702c94712b61b6, type: 3}
   jumpSounds:
   - {fileID: 8300000, guid: c01139c5aaef27248a55229d7babea11, type: 3}
   - {fileID: 8300000, guid: 32ade9f29b7148f47aa72202d36190c7, type: 3}
@@ -4511,6 +4511,7 @@ MonoBehaviour:
   coinText: {fileID: 908285868}
   coinsCollected: 0
   isFlipped: 0
+  hasKey: 0
 --- !u!95 &378251510
 Animator:
   serializedVersion: 7
@@ -8256,6 +8257,7 @@ MonoBehaviour:
   unfinishedText: {fileID: 2055294827}
   questGoal: 10
   levelToLoad: 3
+  isLastScene: 0
 --- !u!1 &720038363
 GameObject:
   m_ObjectHideFlags: 0
