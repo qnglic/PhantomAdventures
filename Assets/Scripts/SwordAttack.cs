@@ -5,10 +5,17 @@ public class SwordAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {    
         EnemyMovement enemy = other.GetComponent<EnemyMovement>();
-
-        if (other.CompareTag("Enemy"))
+        if (enemy != null)
         {
             enemy.EnemyDeath();
+            return;
+        }
+
+        FlyEnemyMovement flyEnemy = other.GetComponent<FlyEnemyMovement>();
+
+        if (flyEnemy != null)
+        {
+            flyEnemy.FlyEnemyDeath();
         }
     }
 }
