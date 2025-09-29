@@ -416,13 +416,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: House (Outside And Inside) Tileset_4
+      name: Shelves
       rect:
         serializedVersion: 2
-        x: 63
-        y: 386
-        width: 289
-        height: 111
+        x: 160
+        y: 448
+        width: 97
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -900,13 +900,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: House (Outside And Inside) Tileset_26
+      name: BigLamp
       rect:
         serializedVersion: 2
-        x: 83
-        y: 373
-        width: 10
-        height: 12
+        x: 65
+        y: 392
+        width: 14
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1428,12 +1428,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: House (Outside And Inside) Tileset_50
+      name: SaturnPainting
       rect:
         serializedVersion: 2
         x: 159
         y: 293
-        width: 130
+        width: 33
         height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1494,7 +1494,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: House (Outside And Inside) Tileset_53
+      name: LongPainting
       rect:
         serializedVersion: 2
         x: 162
@@ -1780,13 +1780,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: House (Outside And Inside) Tileset_66
+      name: SmallWindow
       rect:
         serializedVersion: 2
-        x: 252
-        y: 76
-        width: 24
-        height: 24
+        x: 253
+        y: 77
+        width: 22
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2035,6 +2035,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      BigLamp: -6811861444729365236
       House (Outside And Inside) Tileset_0: 4345758652637206247
       House (Outside And Inside) Tileset_1: 8900186188742487863
       House (Outside And Inside) Tileset_10: -192024081203528696
@@ -2054,7 +2055,6 @@ TextureImporter:
       House (Outside And Inside) Tileset_23: -5394214043445944732
       House (Outside And Inside) Tileset_24: 117711306788246897
       House (Outside And Inside) Tileset_25: -5275080524919456878
-      House (Outside And Inside) Tileset_26: -6811861444729365236
       House (Outside And Inside) Tileset_27: -5518056338987134428
       House (Outside And Inside) Tileset_28: 3154739050789462740
       House (Outside And Inside) Tileset_29: 8044287750017321874
@@ -2069,7 +2069,6 @@ TextureImporter:
       House (Outside And Inside) Tileset_37: -2534613256126077030
       House (Outside And Inside) Tileset_38: 3450047436970676169
       House (Outside And Inside) Tileset_39: -5307120389473618308
-      House (Outside And Inside) Tileset_4: -6406864504289297766
       House (Outside And Inside) Tileset_40: 6914956326745530536
       House (Outside And Inside) Tileset_41: 3515586647648137628
       House (Outside And Inside) Tileset_42: -5913529289096814011
@@ -2081,10 +2080,8 @@ TextureImporter:
       House (Outside And Inside) Tileset_48: 185912440300253257
       House (Outside And Inside) Tileset_49: -6526971037262804157
       House (Outside And Inside) Tileset_5: 8342058820358896971
-      House (Outside And Inside) Tileset_50: -601792379608258777
       House (Outside And Inside) Tileset_51: 2614647684545934254
       House (Outside And Inside) Tileset_52: 4135616870788616500
-      House (Outside And Inside) Tileset_53: -9210478222914387064
       House (Outside And Inside) Tileset_54: -6451892825459570723
       House (Outside And Inside) Tileset_55: -6593596457079598483
       House (Outside And Inside) Tileset_56: 7409983868995765070
@@ -2097,7 +2094,6 @@ TextureImporter:
       House (Outside And Inside) Tileset_63: -6045907419787662677
       House (Outside And Inside) Tileset_64: -1114673395870170533
       House (Outside And Inside) Tileset_65: 2420212030285382213
-      House (Outside And Inside) Tileset_66: 6028340525026232302
       House (Outside And Inside) Tileset_67: -9036837894252857969
       House (Outside And Inside) Tileset_69: 8683168845055071600
       House (Outside And Inside) Tileset_7: -848857135895676156
@@ -2110,6 +2106,10 @@ TextureImporter:
       House (Outside And Inside) Tileset_76: 2320157475678410791
       House (Outside And Inside) Tileset_8: 9217142469824012060
       House (Outside And Inside) Tileset_9: -122119318682688088
+      LongPainting: -9210478222914387064
+      SaturnPainting: -601792379608258777
+      Shelves: -6406864504289297766
+      SmallWindow: 6028340525026232302
       TeleporterDoorBlack: 4453721478750868255
       TeleporterDoorBrown: -6455858963326009785
   mipmapLimitGroupName: 
