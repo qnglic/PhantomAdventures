@@ -30002,7 +30002,7 @@ PrefabInstance:
     - target: {fileID: 8214393521963341974, guid: d8abf7085c3e0c046b5ed461fac0e140, type: 3}
       propertyPath: spawnPosition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 953366813}
     - target: {fileID: 8214393521963341974, guid: d8abf7085c3e0c046b5ed461fac0e140, type: 3}
       propertyPath: swordAttackSound
       value: 
